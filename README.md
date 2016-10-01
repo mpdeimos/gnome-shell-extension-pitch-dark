@@ -26,3 +26,4 @@ Acknowledgement
 ---------------
 
 It borrows the guessWindowXID function from [mathematicalcoffee's maximus extension](https://bitbucket.org/mathematicalcoffee/maximus-gnome-shell-extension).
+The configuration code to select from installed applications is borrowed from [GNOME Window List extension](https://github.com/GNOME/gnome-shell-extensions/tree/master/extensions/auto-move-windows). 

@@ -20,10 +20,19 @@
 
 const Glib = imports.gi.GLib;
 const Shell = imports.gi.Shell;
+const ExtensionUtils = imports.misc.extensionUtils;
+
+const Me = ExtensionUtils.getCurrentExtension();
+const Convenience = Me.imports.convenience;
 
 const display = global.screen.get_display();
 
 let listener = null;
+let settings = null;
+
+function init() {
+  settings = Convenience.getSettings();
+}
 
 function setDarkTheme(win) {
   let xid = !(win.skip_taskbar) && guessWindowXID(win);

@@ -1,0 +1,21 @@
+<schemalist gettext-domain="gnome-shell-extensions">
+  <enum id="org.gnome.shell.extensions.pitch-dark.Mode">
+    <value value="0" nick="all"/>
+    <value value="1" nick="whitelist"/>
+    <value value="2" nick="blacklist"/>
+  </enum>
+  <schema id="org.gnome.shell.extensions.pitch-dark" path="/org/gnome/shell/extensions/pitch-dark/">
+    <key name="mode" enum="org.gnome.shell.extensions.pitch-dark.Mode">
+      <default>'all'</default>
+      <summary>Apply dark theme to</summary>
+      <description>
+        Decides for which applications the dark theme is applied.
+      </description>
+    </key>
+    <key name="application-list" type="as">
+      <default>[ ]</default>
+      <summary>Application list</summary>
+      <description>A list of strings, each containing an application id (desktop file name)</description>
+    </key>
+  </schema>
+</schemalist>
